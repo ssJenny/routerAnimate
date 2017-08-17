@@ -2,8 +2,8 @@
 
   <div class="index">
     <ul>
-      <li><router-link to="pageA">pageA</router-link></li>
-      <li><router-link to="pageB">pageB</router-link></li>
+      <li><router-link to="/pageA">pageA</router-link></li>
+      <li><router-link to="/pageB">pageB</router-link></li>
     </ul>
   </div>
 </template>
@@ -11,7 +11,16 @@
 <script>
 export default {
   name: 'index',
-
+  data() {
+    return {
+      vuegConfig: {
+        forwardAnim: this.$store.state.page.forwardAnim,
+        backAnim: this.$store.state.page.backAnim,
+        duration: this.$store.state.page.duration,
+        disable:false
+      }
+    }
+  },
 }
 </script>
 

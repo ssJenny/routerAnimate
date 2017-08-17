@@ -1,19 +1,27 @@
 <template>
   <div id="app">
-    <router-view></router-view>
+    <router-view class="child-view"></router-view>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'app'
-}
+  let vm
+  export default {
+
+
+  }
 </script>
 
-<style lang="less" rel="stylesheet/less">
-  @import "~assets/css/animate.css";
-#app {
-  height: 100%;
-  width: 100%;
-}
+<style scoped>
+
+  #app{
+    height: 100%;
+    width: 100%;
+  }
+  .child-view{
+    width: 100%;
+    height: 100%;
+  }
 </style>
+
+

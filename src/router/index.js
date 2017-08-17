@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Animate from '@/components/animate'
 import Index from '@/components/index'
 import PageA from '@/components/pageA'
 import PageB from '@/components/pageB'
@@ -15,23 +14,21 @@ Router.prototype.goBack = function () {
 
 export default new Router({
   routes: [
-    {
-      path: '/',
-      component: Animate,
-      children: [
+
         {
           path: '',
-          component: Index
+          component: Index,
+          name:'index'
         },
         {
-          path: 'pageA',
-          component: PageA
+          path: '/pageA',
+          component: PageA,
+          name:'pageA'
         },
         {
-          path: 'pageB',
-          component: PageB
-        }
+          path: '/pageB',
+          component: PageB,
+          name:'pageB'
+        },
       ]
-    }
-  ]
 })
